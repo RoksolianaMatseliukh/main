@@ -24,12 +24,8 @@ export default {
       return {
           navigation: [{path: '/program', name: 'Program'}, 
                        {path: '/learned', name: 'Learned'},
-<<<<<<< HEAD
                        {path: '/calculator', name: 'Calculator'},
                        {path: '/todo_done_lists', name: 'Todo_Done_Lists'}]
-=======
-                       {path: '/calculator', name: 'Calculator'}]
->>>>>>> b5a4f95ce33accc59aff723975cc1f46d0701262
       }
   }
 
@@ -51,3 +47,4 @@ export default {
     }
 
 </style>
+

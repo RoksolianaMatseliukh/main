@@ -9,19 +9,21 @@
         <input type="number" 
                placeholder="enter number" 
                v-model="number2" class="inpMargin">
-        <button class="btn btn-dark"> calculate </button>
 
         <p v-if="number1 || number2"
             class="numbersView"> 
             <b> first number: {{ number1 }} | second number: {{ number2 }} </b> 
         </p>
 
-        <p v-if="number1 && number2"> addition: {{ (+number1) + (+number2) }} </p>
-        <p v-if="number1 && number2"> subtraction: {{ number1 - number2 }} </p>
-        <p v-if="number1 && number2"> multiplication: {{ number1 * number2 }} </p>
-        <p v-if="number1 && number2"> division: {{ number1 / number2 }} </p>
-        <p v-if="number1"> square root of first number: {{ Math.sqrt(number1) }} </p>
-        <p v-if="number2"> square root of second number: {{ Math.sqrt(number2) }} </p>
+        <div  v-if="number1 || number2"
+              class="calculationView">
+            <p v-if="number1 && number2"> addition: {{ (+number1) + (+number2) }} </p>
+            <p v-if="number1 && number2"> subtraction: {{ number1 - number2 }} </p>
+            <p v-if="number1 && number2"> multiplication: {{ number1 * number2 }} </p>
+            <p v-if="number1 && number2"> division: {{ number1 / number2 }} </p>
+            <p v-if="number1"> square root of first number: {{ Math.sqrt(number1) }} </p>
+            <p v-if="number2"> square root of second number: {{ Math.sqrt(number2) }} </p>
+        </div>
 
         <div class="allBtnView">
             <router-link class="btn btn-info" 
@@ -74,5 +76,12 @@ export default {
     .btnMargin {
         margin-left: 10px;
     }
+
+    .calculationView {
+        padding: 15px;
+        width: 50%;
+        border: 1px solid rgb(28, 107, 197);
+    }
     
 </style>
+

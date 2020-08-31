@@ -31,7 +31,7 @@ export default {
     }),
     async addTask() {
       try {
-        await this.addTodo(this.description);
+        this.description && await this.addTodo(this.description);
         this.description = '';
       } catch(e) {
         console.error(e);

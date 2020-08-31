@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <div class="taskMargin">
 
-      <p :class="task.priority && 'priority'"> {{task.title}}
+          <span :class="task.priority && 'priority'"> {{task.title}} </span>
+
           <button @click="remove(task.id, task.title)"
                   class="btn btn-outline-success btnMargin"> 
                   remove 
           </button>
 
-          <button @click="setStatus(task.id, task.title)"
-                  class="btn btn-outline-warning btnMargin"
-                  v-if="!task.priority"> 
+          <button v-if="!task.priority"
+                  @click="setStatus(task.id, task.title)"
+                  class="btn btn-outline-warning btnMargin"> 
                   make priority 
           </button>
-      </p>
-
+ 
   </div>
 </template> 
 
@@ -58,12 +58,18 @@ export default {
 <style scoped>
 
   .priority {
-    color: rgb(235, 118, 35);
+    background-color: rgb(235, 118, 35);
+    color: white;
+    padding: 5px;
     font-size: 18px;
   }
 
   .btnMargin {
-    margin-left: 5px;
+    margin-left: 10px;
+  }
+
+  .taskMargin {
+    margin-top: 15px;
   }
   
 </style>

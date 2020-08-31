@@ -80,6 +80,7 @@ export default {
     display: flex;
     flex-direction: raw;
     justify-content: flex-start;
+    align-items: baseline;
     margin-top: 25px;
   }
 
